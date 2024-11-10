@@ -6,7 +6,7 @@ A Java client core for [Project Gemini](https://geminiprotocol.net/) that can be
 
 ### Sending a request
 
-~~~
+~~~java
 RequestOptions options = new RequestOptions();
         
  GeminiRequest request = new GeminiRequestBuilder( "geminiprotocol".net", options )
