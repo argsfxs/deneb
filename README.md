@@ -31,7 +31,7 @@ RequestOptions options = new RequestOptions();
 
 ### Options
 
-Each request can be enhanced with the following options:
+The following options can be specified per request:
 
 | Option                         | Default value | Description                                                                                 |
 |--------------------------------|---------------|---------------------------------------------------------------------------------------------|
