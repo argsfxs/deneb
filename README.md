@@ -8,39 +8,23 @@ for example, browsers).
 ### Sending a request
 
 ~~~java
-RequestOptions options = new RequestOptions();
-
-GeminiRequest request = new GeminiRequestBuilder( "geminiprotocol.net", options )
-    .withPath( "docs/faq.gmi" )
-    .build();
-
+GeminiRequest request = new GeminiRequestBuilder( "geminiprotocol" +
+    ".net", options ).withPath( "docs/gemtext-specification.gmi" ).build();
 GeminiResponse response = request.send();
         
- System.out.
-
-println( response.getHeader( ) );
-    System.out.
-
-println( response.getStatus( ) );
-    System.out.
-
-println();
- if(response instanceof GeminiSuccessResponse )
-    {
-
-BufferedReader in = new BufferedReader(
+System.out.println( response.getHeader() );
+System.out.println( response.getStatus() );
+System.out.println();
+if ( response instanceof GeminiSuccessResponse )
+{
+    BufferedReader in = new BufferedReader(
     new InputStreamReader( ( ( GeminiSuccessResponse ) response ).getContent() ) );
-
-String line;
-    while((line =in.
-
-readLine() )!=null)
+    String line;
+     while ( ( line = in.readLine() ) != null )
     {
-    System.out.
-
-println( line );
+        System.out.println( line );
     }
-        }
+}
 ~~~
 
 ### Options
