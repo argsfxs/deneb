@@ -8,6 +8,7 @@ for example, browsers).
 ### Sending a request
 
 ~~~java
+RequestOptions options = new RequestOptions();
 GeminiRequest request = new GeminiRequestBuilder( "geminiprotocol" +
     ".net", options ).withPath( "docs/gemtext-specification.gmi" ).build();
 GeminiResponse response = request.send();
