@@ -1,6 +1,7 @@
 # Deneb
 
-A Java client core for [Project Gemini](https://geminiprotocol.net/) that can be used to build sophisticated clients (for example, browsers).
+A Java client core for [Project Gemini](https://geminiprotocol.net/) that can be used to build sophisticated clients (
+for example, browsers).
 
 ## Usage
 
@@ -8,25 +9,38 @@ A Java client core for [Project Gemini](https://geminiprotocol.net/) that can be
 
 ~~~java
 RequestOptions options = new RequestOptions();
-        
- GeminiRequest request = new GeminiRequestBuilder( "geminiprotocol.net", options )
+
+GeminiRequest request = new GeminiRequestBuilder( "geminiprotocol.net", options )
     .withPath( "docs/faq.gmi" )
     .build();
- GeminiResponse response = request.send();
+
+GeminiResponse response = request.send();
         
- System.out.println( response.getHeader() );
- System.out.println( response.getStatus() );
- System.out.println();
- if ( response instanceof GeminiSuccessResponse )
- {
-    BufferedReader in = new BufferedReader(
-        new InputStreamReader( ( ( GeminiSuccessResponse ) response ).getContent() ) );
-    String line;
-    while ( ( line = in.readLine() ) != null )
+ System.out.
+
+println( response.getHeader( ) );
+    System.out.
+
+println( response.getStatus( ) );
+    System.out.
+
+println();
+ if(response instanceof GeminiSuccessResponse )
     {
-        System.out.println( line );
+
+BufferedReader in = new BufferedReader(
+    new InputStreamReader( ( ( GeminiSuccessResponse ) response ).getContent() ) );
+
+String line;
+    while((line =in.
+
+readLine() )!=null)
+    {
+    System.out.
+
+println( line );
     }
- }
+        }
 ~~~
 
 ### Options
